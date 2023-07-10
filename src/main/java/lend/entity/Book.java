@@ -14,9 +14,15 @@ public class Book {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    Integer id;
+    private Integer id;
     @Column(name = "NAME")
-    String bookName;
+    private String bookName;
     @Column(name = "AUTHOR")
-    String bookAuthor;
+    private String bookAuthor;
+    @ManyToOne
+    @JoinColumn(name = "LENDER_ID")
+    private User lendUser;
+    @ManyToOne
+    @JoinColumn(name = "BORROWER_ID")
+    private User borrowedUser;
 }

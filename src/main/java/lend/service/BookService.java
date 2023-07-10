@@ -24,7 +24,7 @@ public class BookService{
 		bookRepository.save(book);		
 	}
 	
-	public void deleteBook(Long id) {
+	public void deleteBook(Integer id) {
 		boolean exist = bookRepository.existsById(id);
 		if(!exist) {
 			throw new IllegalStateException("The book you want to delete doesn't exist.");

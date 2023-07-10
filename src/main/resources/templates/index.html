@@ -9,7 +9,18 @@
 </head>
 <body>
 	<!-- navbar -->
-	<div th:include="fragments/navbar.html :: topnav"></div>
+	<div th:replace="fragments/navbar :: topnav"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<div class="container-fluid">
+		<h1 style = "text-align: center; color:#00802b">Homepage</h1>
+		<h2 style = "text-align: center; font-family: Comic Sans MS">Welcome to the Book Den, a place where people connect together through books</h2>
+		<br>
+	</div>
+	<div class="container-fluid">
+		<ul style="font-size:1.4em">
+			<li>Total users: </li>
+			<li>Total books: </li>
+		</ul>
+	</div>
 </body>
 </html>

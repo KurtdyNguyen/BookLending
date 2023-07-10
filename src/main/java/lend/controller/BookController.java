@@ -9,21 +9,24 @@ import java.util.List;
 
 import lend.entity.Book;
 import lend.service.BookService;
+import lend.service.UserService;
 
 @Controller
 public class BookController {
 	private final BookService bookService;
+	private final UserService userService;
 	
 	@Autowired
-	public BookController(BookService bookService) {
+	public BookController(BookService bookService, UserService userService) {
 		this.bookService = bookService;
+		this.userService = userService;
 	}
 	
-	@GetMapping("/browser/book")
+	@GetMapping("/book")
 	public String listBooks(Model model) {
 		List<Book> Books = bookService.getBooks();
 		model.addAttribute("books", Books);
-		return "list_book";
+		return "book";
 	}
 	
 	
