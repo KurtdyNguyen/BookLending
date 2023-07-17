@@ -25,4 +25,6 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "BORROWER_ID")
     private User borrowedUser;
+    @Column(name = "DESCRIPTION")
+    private String description;
 }

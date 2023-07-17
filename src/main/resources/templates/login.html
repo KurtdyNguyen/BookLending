@@ -30,6 +30,7 @@
                         method="post"
                         role="form"
                         th:action="@{/login}"
+                        th:object="${authenticationRequest}"
                         class="form-horizontal"
                     >
                         <div class="form-group mb-3">
@@ -56,7 +57,7 @@
                         <div class="form-group mb-3">
                             <button type="submit" class="btn btn-primary" >Submit</button>
                             <span> Not registered ?
-                                <a th:href="@{/register}">Register/Signup here</a>
+                                <a th:href="@{/register_form}">Register/Signup here</a>
                             </span>
                         </div>
                     </form>

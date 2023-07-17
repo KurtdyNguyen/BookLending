@@ -1,6 +1,7 @@
-package lend.entity;
+package lend.security;
 
 import jakarta.persistence.*;
+import lend.entity.User;
 import lombok.*;
 
 @Data

@@ -1,4 +1,4 @@
-package lend.entity;
+package lend.security;
 
 public enum TokenType {
 	BEARER
